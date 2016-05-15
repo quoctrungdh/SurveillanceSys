@@ -1,0 +1,33 @@
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\bin\Debug\Server.exe.config
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\bin\Debug\Server.exe
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\bin\Debug\Server.pdb
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\obj\Debug\Server.Form1.resources
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\obj\Debug\Server.Properties.Resources.resources
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\obj\Debug\Server.exe
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\obj\Debug\Server.pdb
+c:\users\purik\documents\visual studio 2015\Projects\ServeillentSystem\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.exe
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.exe
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.pdb
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.Form1.resources
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.Properties.Resources.resources
+E:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+F:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
+F:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.exe
+F:\Study\DA_NCKH_KLTN\SurveillanceSystem\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.exe
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.exe
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\bin\Debug\Server.pdb
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.Form1.resources
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.Properties.Resources.resources
+D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystemServer\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
+C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.exe
+C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
