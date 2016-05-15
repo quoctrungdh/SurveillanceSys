@@ -31,3 +31,6 @@ D:\PROJECTS\KhoaLuan\SurveillanceSys\SurveillanceSystemServer\SurveillanceSystem
 C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
 C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.exe
 C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
+C:\Users\pxhie\Desktop\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
+C:\Users\pxhie\Desktop\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.exe
+C:\Users\pxhie\Desktop\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
