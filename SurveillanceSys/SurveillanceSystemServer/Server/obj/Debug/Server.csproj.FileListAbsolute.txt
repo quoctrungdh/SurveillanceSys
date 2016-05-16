@@ -34,3 +34,12 @@ C:\Users\pxhie\Desktop\SurveillanceSys-15-05-(SendRecvImg)\SurveillanceSys\Surve
 C:\Users\pxhie\Desktop\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
 C:\Users\pxhie\Desktop\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.exe
 C:\Users\pxhie\Desktop\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.exe.config
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.exe
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.pdb
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.Form1.resources
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.Properties.Resources.resources
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.exe
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSystemServer\Server\bin\Debug\Server.pdb

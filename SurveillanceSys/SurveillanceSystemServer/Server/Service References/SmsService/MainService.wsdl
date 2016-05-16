@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MainService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://api.esms.vn/MainService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://api.esms.vn/MainService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetMemberInfomation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberInfomation" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMemberInfomation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberInfomationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessage" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessage_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessage_V2" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessage_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessage_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessageBrandname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessageBrandname" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessageBrandname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessageBrandnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleSMSBrandname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleSMSBrandname" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleSMSBrandname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleSMSBrandnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSendStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSendStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSendStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ActiveUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActiveUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_ActiveUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActiveUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerByGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerByGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerByGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerByGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerByPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerByPhone" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetCustomerByPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerByPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewGroup" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddNewGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleEmailv2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleEmailv2" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleEmailv2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleEmailv2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsReceiverStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsReceiverStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsReceiverStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsReceiverStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendBrandnameSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendBrandnameSMS" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendBrandnameSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendBrandnameSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_updatesmsstatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatesmsstatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_updatesmsstatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatesmsstatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService_SignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InternationalSmsResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:InternationalSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InternationalSmsResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InternationalSmsResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CPRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CPRequest" />
+  </wsdl:message>
+  <wsdl:message name="IService_CPRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CPRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneSendIndividualSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneSendIndividualSMS" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneSendIndividualSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneSendIndividualSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneSendBulkSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneSendBulkSMS" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneSendBulkSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneSendBulkSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneGetSentStatusDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneGetSentStatusDetail" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneGetSentStatusDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneGetSentStatusDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ChargeByMobileCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargeByMobileCard" />
+  </wsdl:message>
+  <wsdl:message name="IService_ChargeByMobileCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargeByMobileCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendViettelApi_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendViettelApi" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendViettelApi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendViettelApiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendViettelSingle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendViettelSingle" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendViettelSingle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendViettelSingleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleSMS_v3_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleSMS_v3" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleSMS_v3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleSMS_v3Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetBrandnameStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandnameStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetBrandnameStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandnameStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsReceiverStatus_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsReceiverStatus_V2" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsReceiverStatus_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsReceiverStatus_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendViettelTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendViettelTest" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendViettelTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendViettelTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_WaitThenReturnString_InputMessage">
+    <wsdl:part name="parameters" element="tns:WaitThenReturnString" />
+  </wsdl:message>
+  <wsdl:message name="IService_WaitThenReturnString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WaitThenReturnStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessage_V4_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessage_V4" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendMultipleMessage_V4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMultipleMessage_V4Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_TestMemcached_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestMemcached" />
+  </wsdl:message>
+  <wsdl:message name="IService_TestMemcached_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestMemcachedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsSentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsSentData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSmsSentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSmsSentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendTmpData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendTmpData" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendTmpData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendTmpDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneBrandnameProcess_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloneBrandnameProcess" />
+  </wsdl:message>
+  <wsdl:message name="IService_CloneBrandnameProcess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloneBrandnameProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CancelSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelSMS" />
+  </wsdl:message>
+  <wsdl:message name="IService_CancelSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SignUpTeraapp_InputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpTeraapp" />
+  </wsdl:message>
+  <wsdl:message name="IService_SignUpTeraapp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SignUpTeraappResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_VerifyCall_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyCall" />
+  </wsdl:message>
+  <wsdl:message name="IService_VerifyCall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyCallResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IService">
+    <wsdl:operation name="GetMemberInfomation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetMemberInfomation" message="tns:IService_GetMemberInfomation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetMemberInfomationResponse" message="tns:IService_GetMemberInfomation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleMessage" message="tns:IService_SendMultipleMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleMessageResponse" message="tns:IService_SendMultipleMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessage_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleMessage_V2" message="tns:IService_SendMultipleMessage_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleMessage_V2Response" message="tns:IService_SendMultipleMessage_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessageBrandname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleMessageBrandname" message="tns:IService_SendMultipleMessageBrandname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleMessageBrandnameResponse" message="tns:IService_SendMultipleMessageBrandname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleSMSBrandname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleSMSBrandname" message="tns:IService_SendMultipleSMSBrandname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleSMSBrandnameResponse" message="tns:IService_SendMultipleSMSBrandname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSendStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSendStatus" message="tns:IService_GetSendStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSendStatusResponse" message="tns:IService_GetSendStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ActiveUser" message="tns:IService_ActiveUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ActiveUserResponse" message="tns:IService_ActiveUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCustomerByGroup" message="tns:IService_GetCustomerByGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCustomerByGroupResponse" message="tns:IService_GetCustomerByGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetCustomerByPhone" message="tns:IService_GetCustomerByPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetCustomerByPhoneResponse" message="tns:IService_GetCustomerByPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetGroupList" message="tns:IService_GetGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetGroupListResponse" message="tns:IService_GetGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddNewGroup" message="tns:IService_AddNewGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddNewGroupResponse" message="tns:IService_AddNewGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleEmail" message="tns:IService_SendMultipleEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleEmailResponse" message="tns:IService_SendMultipleEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleEmailv2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleEmailv2" message="tns:IService_SendMultipleEmailv2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleEmailv2Response" message="tns:IService_SendMultipleEmailv2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSmsStatus" message="tns:IService_GetSmsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSmsStatusResponse" message="tns:IService_GetSmsStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsReceiverStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSmsReceiverStatus" message="tns:IService_GetSmsReceiverStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSmsReceiverStatusResponse" message="tns:IService_GetSmsReceiverStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBrandnameSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendBrandnameSMS" message="tns:IService_SendBrandnameSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendBrandnameSMSResponse" message="tns:IService_SendBrandnameSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatesmsstatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/updatesmsstatus" message="tns:IService_updatesmsstatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/updatesmsstatusResponse" message="tns:IService_updatesmsstatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SignUp" message="tns:IService_SignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SignUpResponse" message="tns:IService_SignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InternationalSmsResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InternationalSmsResponse" message="tns:IService_InternationalSmsResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InternationalSmsResponseResponse" message="tns:IService_InternationalSmsResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CPRequest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CPRequest" message="tns:IService_CPRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CPRequestResponse" message="tns:IService_CPRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneSendIndividualSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CloneSendIndividualSMS" message="tns:IService_CloneSendIndividualSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CloneSendIndividualSMSResponse" message="tns:IService_CloneSendIndividualSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneSendBulkSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CloneSendBulkSMS" message="tns:IService_CloneSendBulkSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CloneSendBulkSMSResponse" message="tns:IService_CloneSendBulkSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneGetSentStatusDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CloneGetSentStatusDetail" message="tns:IService_CloneGetSentStatusDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CloneGetSentStatusDetailResponse" message="tns:IService_CloneGetSentStatusDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeByMobileCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ChargeByMobileCard" message="tns:IService_ChargeByMobileCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ChargeByMobileCardResponse" message="tns:IService_ChargeByMobileCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendViettelApi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendViettelApi" message="tns:IService_SendViettelApi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendViettelApiResponse" message="tns:IService_SendViettelApi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendViettelSingle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendViettelSingle" message="tns:IService_SendViettelSingle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendViettelSingleResponse" message="tns:IService_SendViettelSingle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleSMS_v3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleSMS_v3" message="tns:IService_SendMultipleSMS_v3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleSMS_v3Response" message="tns:IService_SendMultipleSMS_v3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandnameStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetBrandnameStatus" message="tns:IService_GetBrandnameStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetBrandnameStatusResponse" message="tns:IService_GetBrandnameStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsReceiverStatus_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSmsReceiverStatus_V2" message="tns:IService_GetSmsReceiverStatus_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSmsReceiverStatus_V2Response" message="tns:IService_GetSmsReceiverStatus_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendViettelTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendViettelTest" message="tns:IService_SendViettelTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendViettelTestResponse" message="tns:IService_SendViettelTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WaitThenReturnString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/WaitThenReturnString" message="tns:IService_WaitThenReturnString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/WaitThenReturnStringResponse" message="tns:IService_WaitThenReturnString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessage_V4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendMultipleMessage_V4" message="tns:IService_SendMultipleMessage_V4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendMultipleMessage_V4Response" message="tns:IService_SendMultipleMessage_V4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestMemcached">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/TestMemcached" message="tns:IService_TestMemcached_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/TestMemcachedResponse" message="tns:IService_TestMemcached_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsSentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSmsSentData" message="tns:IService_GetSmsSentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSmsSentDataResponse" message="tns:IService_GetSmsSentData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTmpData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendTmpData" message="tns:IService_SendTmpData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendTmpDataResponse" message="tns:IService_SendTmpData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloneBrandnameProcess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CloneBrandnameProcess" message="tns:IService_CloneBrandnameProcess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CloneBrandnameProcessResponse" message="tns:IService_CloneBrandnameProcess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CancelSMS" message="tns:IService_CancelSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CancelSMSResponse" message="tns:IService_CancelSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SignUpTeraapp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SignUpTeraapp" message="tns:IService_SignUpTeraapp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SignUpTeraappResponse" message="tns:IService_SignUpTeraapp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/VerifyCall" message="tns:IService_VerifyCall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/VerifyCallResponse" message="tns:IService_VerifyCall_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMemberInfomation">
+      <soap:operation soapAction="http://tempuri.org/IService/GetMemberInfomation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessage">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessage_V2">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleMessage_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessageBrandname">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleMessageBrandname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleSMSBrandname">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleSMSBrandname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSendStatus">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSendStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveUser">
+      <soap:operation soapAction="http://tempuri.org/IService/ActiveUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByGroup">
+      <soap:operation soapAction="http://tempuri.org/IService/GetCustomerByGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerByPhone">
+      <soap:operation soapAction="http://tempuri.org/IService/GetCustomerByPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupList">
+      <soap:operation soapAction="http://tempuri.org/IService/GetGroupList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewGroup">
+      <soap:operation soapAction="http://tempuri.org/IService/AddNewGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleEmail">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleEmailv2">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleEmailv2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsStatus">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSmsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsReceiverStatus">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSmsReceiverStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBrandnameSMS">
+      <soap:operation soapAction="http://tempuri.org/IService/SendBrandnameSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatesmsstatus">
+      <soap:operation soapAction="http://tempuri.org/IService/updatesmsstatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignUp">
+      <soap:operation soapAction="http://tempuri.org/IService/SignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InternationalSmsResponse">
+      <soap:operation soapAction="http://tempuri.org/IService/InternationalSmsResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CPRequest">
+      <soap:operation soapAction="http://tempuri.org/IService/CPRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloneSendIndividualSMS">
+      <soap:operation soapAction="http://tempuri.org/IService/CloneSendIndividualSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloneSendBulkSMS">
+      <soap:operation soapAction="http://tempuri.org/IService/CloneSendBulkSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloneGetSentStatusDetail">
+      <soap:operation soapAction="http://tempuri.org/IService/CloneGetSentStatusDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeByMobileCard">
+      <soap:operation soapAction="http://tempuri.org/IService/ChargeByMobileCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendViettelApi">
+      <soap:operation soapAction="http://tempuri.org/IService/SendViettelApi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendViettelSingle">
+      <soap:operation soapAction="http://tempuri.org/IService/SendViettelSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleSMS_v3">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleSMS_v3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandnameStatus">
+      <soap:operation soapAction="http://tempuri.org/IService/GetBrandnameStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsReceiverStatus_V2">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSmsReceiverStatus_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendViettelTest">
+      <soap:operation soapAction="http://tempuri.org/IService/SendViettelTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WaitThenReturnString">
+      <soap:operation soapAction="http://tempuri.org/IService/WaitThenReturnString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMultipleMessage_V4">
+      <soap:operation soapAction="http://tempuri.org/IService/SendMultipleMessage_V4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestMemcached">
+      <soap:operation soapAction="http://tempuri.org/IService/TestMemcached" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsSentData">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSmsSentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTmpData">
+      <soap:operation soapAction="http://tempuri.org/IService/SendTmpData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloneBrandnameProcess">
+      <soap:operation soapAction="http://tempuri.org/IService/CloneBrandnameProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSMS">
+      <soap:operation soapAction="http://tempuri.org/IService/CancelSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignUpTeraapp">
+      <soap:operation soapAction="http://tempuri.org/IService/SignUpTeraapp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyCall">
+      <soap:operation soapAction="http://tempuri.org/IService/VerifyCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MainService">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://api.esms.vn/MainService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

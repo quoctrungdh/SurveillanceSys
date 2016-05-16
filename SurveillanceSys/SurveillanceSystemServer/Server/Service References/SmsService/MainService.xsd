@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://api.esms.vn/MainService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="GetMemberInfomation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberInfomationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetMemberInfomationResult" type="tns:MemberModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MemberModel">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="Balance" type="xs:double" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResponse" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendMultipleMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleMessageResult" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SmsResultModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SMSID" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SendStatus" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CountRegenerate" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="IsSandbox" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendMultipleMessage_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="EmailData" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleMessage_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleMessage_V2Result" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleMessageBrandname">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="BrandnameCode" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleMessageBrandnameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleMessageBrandnameResult" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleSMSBrandname">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/Message" name="SmsData" type="q2:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleSMSBrandnameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleSMSBrandnameResult" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SmsID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSendStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSendStatusResult" type="tns:SmsStatusResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SmsStatusResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="SMSID" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SendStatus" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResponse" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SendSuccess" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SendFailed" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalReceiver" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalSent" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActiveUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CodeConfirm" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActiveUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ActiveUserResult" type="tns:MemberRegisterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MemberRegisterResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeConfirm" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCustomerByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GroupId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="CurrentPage" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="RecordPerPage" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="PageSize" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCustomerByGroupResult" type="tns:GetCustomerByGroupResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetCustomerByGroupResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerList" type="tns:ArrayOfCustomerResultList" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalRecord" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfCustomerResultList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerResultList" nillable="true" type="tns:CustomerResultList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CustomerResultList">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="CustomerID" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Facebook" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Gender" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalRecord" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RecordPerPage" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCustomerByPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerByPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetCustomerByPhoneResult" type="tns:CustomerResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerResultModel">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="CustomerID" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Facebook" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Gender" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetGroupListResult" type="tns:GroupListResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GroupListResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="GroupsList" type="tns:ArrayOfGroup" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalRecord" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:Group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Group">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="GroupId" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="GroupName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateCreated" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddNewGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GroupName" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="AddNewGroupResult" type="tns:ExecuteResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ExecuteResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendMultipleEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="EmailData" type="q3:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleEmailResult" type="tns:EmailResponseModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EmailResponseModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SendResult" type="tns:ArrayOfEmailResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfEmailResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailResult" nillable="true" type="tns:EmailResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EmailResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Email" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Id" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RejectReason" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Status" type="tns:EmailResultStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="EmailResultStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sent" />
+      <xs:enumeration value="Queued" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="Invalid" />
+      <xs:enumeration value="Scheduled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SendMultipleEmailv2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/Message" name="EmailData" type="q4:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleEmailv2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleEmailv2Result" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmsStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/Message" name="SmsData" type="q5:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmsStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSmsStatusResult" type="tns:SmsStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SmsStatus">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="StatusCode" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SuccessCount" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FailedCount" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalSent" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalReceiver" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TotalPrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetSmsReceiverStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/Message" name="SmsData" type="q6:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmsReceiverStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSmsReceiverStatusResult" type="tns:SmsReceiver" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SmsReceiver">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReceiverList" type="tns:ArrayOfReceiver" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReceiverStatus" type="tns:ArrayOfReceiverStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfReceiver">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Receiver" nillable="true" type="tns:Receiver" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Receiver">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SentResult" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsSent" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfReceiverStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReceiverStatus" nillable="true" type="tns:ReceiverStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReceiverStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Status" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SentTime" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendBrandnameSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/Message" name="SmsData" type="q7:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendBrandnameSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendBrandnameSMSResult" type="tns:SmsReceiver" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatesmsstatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="REFERENCE" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="STATUS" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="DESTINATION" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="TIMESTAMP" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="REASON" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="OPERATOR" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatesmsstatusResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="SignUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/Message" name="UserData" type="q8:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SignUpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SignUpResult" type="tns:MemberRegisterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InternationalSmsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="msisdn" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="to" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="network_code" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="messageId" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="price" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Status" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="scts" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="err_code" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="message_timestamp" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InternationalSmsResponseResponse">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="CPRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="sender" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="keyword" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="content" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="servicesnumber" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="authenkey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="cpid" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="smsid" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="time" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CPRequestResult" type="tns:ClientResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ClientResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Message" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SmsId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Receiver" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CloneSendIndividualSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Request" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="TypeOfSMS" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Brandname" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneSendIndividualSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CloneSendIndividualSMSResult" type="tns:CloneStatusResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CloneStatusResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SendID" type="tns:ArrayOfLong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfLong">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="long" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CloneSendBulkSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Request" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="TypeOfSMS" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Brandname" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneSendBulkSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CloneSendBulkSMSResult" type="tns:CloneStatusResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneGetSentStatusDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="refId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneGetSentStatusDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CloneGetSentStatusDetailResult" type="tns:CloneSmsDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CloneSmsDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SentStatus" type="tns:ArrayOfPhoneSentStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfPhoneSentStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhoneSentStatus" nillable="true" type="tns:PhoneSentStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PhoneSentStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsSucccess" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IsSent" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChargeByMobileCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/Message" name="Data" type="q9:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargeByMobileCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ChargeByMobileCardResult" type="tns:MobileChargeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MobileChargeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResponse" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AmountCharge" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendViettelApi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Request" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Brandname" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendViettelApiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendViettelApiResult" type="tns:SendViettelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SendViettelResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendViettelSingle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendViettelSingleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendViettelSingleResult" type="tns:SendViettelResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleSMS_v3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="IsUnicode" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Brandname" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SmsType" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Sandbox" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleSMS_v3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleSMS_v3Result" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandnameStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SMSID" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandnameStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetBrandnameStatusResult" type="tns:SmsCloneResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SmsCloneResultModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SendStatus" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumSuccess" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="NumFailed" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetSmsReceiverStatus_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SMSID" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ApiKey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SecretKey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmsReceiverStatus_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSmsReceiverStatus_V2Result" type="tns:SmsReceiver" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendViettelTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendViettelTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendViettelTestResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WaitThenReturnString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="waitMilliSeconds" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WaitThenReturnStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="WaitThenReturnStringResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleMessage_V4">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/Message" name="SmsData" type="q10:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMultipleMessage_V4Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SendMultipleMessage_V4Result" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestMemcached">
+    <xs:complexType />
+  </xs:element>
+  <xs:element name="TestMemcachedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="TestMemcachedResult" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmsSentData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/Message" name="ConditionData" type="q11:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSmsSentDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="GetSmsSentDataResult" type="tns:SmsSentResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SmsSentResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="CodeResult" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SentData" type="tns:ArrayOfSmsSentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfSmsSentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SmsSentData" nillable="true" type="tns:SmsSentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SmsSentData">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="SentTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SmsType" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SentStatus" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendTmpData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="IsUnicode" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Source" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTmpDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/Message" name="SendTmpDataResult" type="q12:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneBrandnameProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Task" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="BrandName" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Apikey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Secretkey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Type" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="NewBrandname" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloneBrandnameProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/Message" name="CloneBrandnameProcessResult" type="q13:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/Message" name="SMSData" type="q14:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CancelSMSResult" type="tns:SmsResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SignUpTeraapp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/Message" name="UserData" type="q15:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SignUpTeraappResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="SignUpTeraappResult" type="tns:MemberRegisterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyCall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Phone" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Apikey" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Secretkey" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyCallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.microsoft.com/Message" name="VerifyCallResult" type="q16:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
