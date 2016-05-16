@@ -15,6 +15,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Drawing.Imaging;
 
+using System.Data.SqlClient;
+
 
 namespace Server
 {
@@ -110,20 +112,21 @@ namespace Server
                         {
                             Image recvImg = (Image)ByteArrayToObject(recvData);
                             pictureBox1.Image = recvImg;
+                            AddLbStatus("Received image from " + socket.RemoteEndPoint.ToString());
 
-                            string remoteEndPointInfo = socket.RemoteEndPoint.ToString();
-                            string alarmTime = DateTime.Now.ToShortDateString().ToString();
-                            string notiMess = "Camera " + remoteEndPointInfo + " phat hien chuyen dong vao luc " + alarmTime;
-                           // SendNoti("0905809054", notiMess);
+                            string datetime = DateTime.Now.ToString();
+                            datetime = datetime.Replace(@" ", "");
+                            datetime = datetime.Replace(@":", "");
+                            datetime = datetime.Replace(@"/", "");
+                            string imgFileName = Application.StartupPath + "\\" + datetime + ".jpg";
+                            string ipCam = socket.RemoteEndPoint.ToString();
 
-                            AddLbStatus("Received image from " + remoteEndPointInfo);
-                            
-                            string imgFileName = /*DateTime.Now.ToShortDateString().ToString()*/"abc.jpg";
                             Image saveImg = (Image)recvImg.Clone();
-                            saveImg.Save("D:/" + imgFileName, ImageFormat.Jpeg);
-                            AddLbStatus(socket.RemoteEndPoint.ToString() + ".jpeg saved");
-                            
-                            
+                            saveImg.Save(imgFileName, ImageFormat.Jpeg);
+
+                            InsertDB(datetime, ipCam, imgFileName);
+
+                            AddLbStatus(socket.RemoteEndPoint.ToString() + ".jpeg saved at " + datetime);    
                         }
                     }
                     catch (Exception ex)
@@ -137,6 +140,33 @@ namespace Server
             th_InteractClient.Start();
         }
 
+        void InsertDB(string datetime, string ipCam, string link)
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV12;Initial Catalog=SurveillanceSys_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False");
+
+            if (connection.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
+            using (SqlCommand cmd = new SqlCommand("INSERT INTO [Table] VALUES(@time, @ip, @link)", connection))
+            {
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("@time", datetime));
+                cmd.Parameters.Add(new SqlParameter("@ip", ipCam));
+                cmd.Parameters.Add(new SqlParameter("@link", link));
+                cmd.ExecuteNonQuery();
+            }
+
+            connection.Close();
+        }
 
         private string GetIPByName(string name)
         {

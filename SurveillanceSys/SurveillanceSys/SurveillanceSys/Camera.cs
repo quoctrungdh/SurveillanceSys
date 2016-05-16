@@ -88,7 +88,7 @@ namespace SurveillanceSys
                     // blur it
                     CvInvoke.GaussianBlur(gray, gray, new Size(21, 21), 0);
                     
-                    CvInvoke.Imshow("gray", gray);
+                    //CvInvoke.Imshow("gray", gray);
 
                     // if first frame is null meaning it's first frame of video
                     if (firstFrame == null)
@@ -96,13 +96,13 @@ namespace SurveillanceSys
                         //clone from gray frame
                         firstFrame = gray.Clone();
                         frameDelta = firstFrame.Clone();
-                        CvInvoke.Imshow("firstFrame", firstFrame);
+                        //CvInvoke.Imshow("firstFrame", firstFrame);
                         continue;
                     }
 
                     // every frame change, compair with first frame, if there is difference between them, save it to frame delta
                     CvInvoke.AbsDiff(gray, firstFrame, frameDelta);
-                    CvInvoke.Imshow("frameDelta", frameDelta);
+                    //CvInvoke.Imshow("frameDelta", frameDelta);
 
                     // threshold frame delta
                     CvInvoke.Threshold(frameDelta, thresh, 25, 255, Emgu.CV.CvEnum.ThresholdType.Binary);
@@ -110,7 +110,7 @@ namespace SurveillanceSys
                     
                     Morphops(thresh);
 
-                    CvInvoke.Imshow("thresh", thresh);
+                    //CvInvoke.Imshow("thresh", thresh);
 
                     // find contours from thresh image
                     findContours(thresh, cam);
