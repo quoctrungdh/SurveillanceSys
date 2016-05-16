@@ -142,7 +142,8 @@ namespace Server
 
         void InsertDB(string datetime, string ipCam, string link)
         {
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV12;Initial Catalog=SurveillanceSys_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False");
+            //SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV12;Initial Catalog=SurveillanceSys_DB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False");
+            SqlConnection connection = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\PROJECTS\\SurveillanceSys_Git\\SurveillanceSys\\SurveillanceSystemServer\\SurveillanceSystemWebApp\\App_Data\\SurveillanceSysDB.mdf;Integrated Security=True");
 
             if (connection.State == ConnectionState.Closed)
             {
