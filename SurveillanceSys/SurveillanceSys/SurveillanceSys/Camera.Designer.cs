@@ -38,7 +38,14 @@
             this.sttConnect = new System.Windows.Forms.ToolStripStatusLabel();
             this.sttLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.sttActive = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.txtWidth = new System.Windows.Forms.TextBox();
+            this.txtHeigh = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStart_Reset
@@ -98,10 +105,49 @@
             this.sttActive.Name = "sttActive";
             resources.ApplyResources(this.sttActive, "sttActive");
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtHeigh);
+            this.groupBox1.Controls.Add(this.txtWidth);
+            this.groupBox1.Controls.Add(this.btnOK);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // btnOK
+            // 
+            resources.ApplyResources(this.btnOK, "btnOK");
+            this.btnOK.Name = "btnOK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // txtWidth
+            // 
+            resources.ApplyResources(this.txtWidth, "txtWidth");
+            this.txtWidth.Name = "txtWidth";
+            // 
+            // txtHeigh
+            // 
+            resources.ApplyResources(this.txtHeigh, "txtHeigh");
+            this.txtHeigh.Name = "txtHeigh";
+            // 
             // Camera
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnStart_Reset);
             this.Controls.Add(this.lbLog);
@@ -116,6 +162,8 @@
             this.Load += new System.EventHandler(this.Camera_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +180,12 @@
         private System.Windows.Forms.ToolStripStatusLabel sttConnect;
         private System.Windows.Forms.ToolStripStatusLabel sttLabel;
         private System.Windows.Forms.ToolStripStatusLabel sttActive;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtHeigh;
+        private System.Windows.Forms.TextBox txtWidth;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }
 

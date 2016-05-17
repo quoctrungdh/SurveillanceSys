@@ -16,6 +16,7 @@ using System.IO;
 using System.Drawing.Imaging;
 
 using System.Data.SqlClient;
+using System.Globalization;
 
 
 namespace Server
@@ -114,10 +115,12 @@ namespace Server
                             pictureBox1.Image = recvImg;
                             AddLbStatus("Received image from " + socket.RemoteEndPoint.ToString());
 
-                            string datetime = DateTime.Now.ToString();
-                            datetime = datetime.Replace(@" ", "");
-                            datetime = datetime.Replace(@":", "");
-                            datetime = datetime.Replace(@"/", "");
+                            //string datetime = DateTime.Now.ToString();
+
+                            //datetime = datetime.Replace(@" ", "");
+                            //datetime = datetime.Replace(@":", "");
+                            //datetime = datetime.Replace(@"/", "");
+                            string datetime = BuildTimeString(DateTime.Now);
                             string imgFileName = Application.StartupPath + "\\" + datetime + ".jpg";
                             string ipCam = socket.RemoteEndPoint.ToString();
 
@@ -138,6 +141,14 @@ namespace Server
             }));
             th_InteractClient.IsBackground = true;
             th_InteractClient.Start();
+        }
+
+        string BuildTimeString(DateTime recvTime)
+        {
+            string date, time, seperator = "-";
+            date = recvTime.Year + seperator + recvTime.Month.ToString() + seperator + recvTime.Day;
+            time = recvTime.Hour.ToString() + seperator + recvTime.Minute.ToString() + seperator + recvTime.Second.ToString();
+            return date + "_" + time;
         }
 
         void InsertDB(string datetime, string ipCam, string link)

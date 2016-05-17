@@ -11,7 +11,8 @@ namespace SurveillanceSystemWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+           Image1.ImageUrl = Server.MapPath("~/images/test.jpg");
         }
     }
 }

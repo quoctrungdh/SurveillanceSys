@@ -39,6 +39,8 @@ namespace SurveillanceSys
         bool isActived;
         bool stop;
 
+        int width, height;
+
         DateTime time_detect;
 
         public Camera()
@@ -61,8 +63,10 @@ namespace SurveillanceSys
             isConnected = false;
             isActived = false;
             stop = false;
-        
-            OpenFile("video4_1.avi"/*"example_02.mp4""video1.mp4""demo.avi"*/);
+
+            width = height = 50;
+
+            OpenFile("video4_1.avi"/*"video4_1.avi""example_02.mp4""video1.mp4""demo.avi"*/);
         }
 
         void OpenFile(string file)
@@ -80,6 +84,8 @@ namespace SurveillanceSys
                 // end of video
                 if (cam == null)
                     break;
+
+                CvInvoke.Resize(cam, cam, new Size(640, 480));
 
                 try
                 {
@@ -166,8 +172,8 @@ namespace SurveillanceSys
 
                 //compute the bounding box for the contour, draw it on the frame
                 Rectangle rect = CvInvoke.BoundingRectangle(contours[i]);
-                if (rect.Width > 40 && rect.Height > 40)
-                {
+                if (rect.Width >= width && rect.Height >= height)
+                {                    
                     CvInvoke.Rectangle(cam, rect, new MCvScalar(0, 0, 255), 2);
                     if (time_detect == null)
                     {
@@ -200,8 +206,7 @@ namespace SurveillanceSys
             DateTime now = DateTime.Now;
             if (time_detect.Date <= now.Date
                 && time_detect.Hour <= now.Hour
-                && time_detect.Minute <= now.Minute
-                && (now.Second - time_detect.Second) < 5)
+                && (now.Minute - time_detect.Minute) < 5)
             {
                 return true;
             }
@@ -277,6 +282,12 @@ namespace SurveillanceSys
         private void Camera_Load(object sender, EventArgs e)
         {
             txtServerIP.Text = "127.0.0.1";
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            width = Convert.ToInt16(txtWidth.Text);
+            height = Convert.ToInt16(txtHeigh.Text);
         }
     }
 }

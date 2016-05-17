@@ -1,0 +1,16 @@
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\SurveillanceSys.exe.config
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\obj\Debug\SurveillanceSys.exe
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\obj\Debug\SurveillanceSys.pdb
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\SurveillanceSys.exe
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\SurveillanceSys.pdb
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\ZedGraph.dll
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\Emgu.CV.Cuda.dll
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\Emgu.CV.xml
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\Emgu.CV.UI.xml
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\Emgu.CV.VideoStab.xml
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\Emgu.Util.xml
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\bin\Debug\Emgu.CV.Cuda.xml
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\obj\Debug\SurveillanceSys.csprojResolveAssemblyReference.cache
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\obj\Debug\SurveillanceSys.Camera.resources
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\obj\Debug\SurveillanceSys.Properties.Resources.resources
+D:\PROJECTS\SurveillanceSys_Git\SurveillanceSys\SurveillanceSys\SurveillanceSys\obj\Debug\SurveillanceSys.csproj.GenerateResource.Cache
