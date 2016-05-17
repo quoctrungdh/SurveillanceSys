@@ -121,7 +121,8 @@ namespace Server
                             //datetime = datetime.Replace(@":", "");
                             //datetime = datetime.Replace(@"/", "");
                             string datetime = BuildTimeString(DateTime.Now);
-                            string imgFileName = Application.StartupPath + "\\" + datetime + ".jpg";
+                            string filePath = "..\\..\\..\\SurveillanceSystemWebApp\\images";
+                            string imgFileName = /*Application.StartupPath*/ filePath + "\\" + datetime + ".jpg";
                             string ipCam = socket.RemoteEndPoint.ToString();
 
                             Image saveImg = (Image)recvImg.Clone();
@@ -148,7 +149,7 @@ namespace Server
             string date, time, seperator = "-";
             date = recvTime.Year + seperator + recvTime.Month.ToString() + seperator + recvTime.Day;
             time = recvTime.Hour.ToString() + seperator + recvTime.Minute.ToString() + seperator + recvTime.Second.ToString();
-            return date + "_" + time;
+            return date + "." + time;
         }
 
         void InsertDB(string datetime, string ipCam, string link)

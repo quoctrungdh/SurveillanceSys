@@ -26,6 +26,22 @@ input[type="tel"],
 input[type="select"] {
     max-width: 280px;
 }
+select#MainContent_DropDownList1 {
+    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+img#MainContent_Image1 {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    margin-bottom: 20px;
+}
+p {
+    text-align: center;
+}
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

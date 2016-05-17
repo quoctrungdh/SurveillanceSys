@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">SurveillanceSysWebApp</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -54,6 +54,7 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                     </ul>
+                    <!--
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
@@ -70,6 +71,7 @@
                             </ul>
                         </LoggedInTemplate>
                     </asp:LoginView>
+                    -->
                 </div>
             </div>
         </div>
@@ -78,7 +80,10 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <div class="center-block">
+                    <p>pxhieu - quoctrungdh &copy; <%: DateTime.Now.Year %> - SurveillanceSysWebApp</p>
+                </div>
+                
             </footer>
         </div>
     </form>
